@@ -1,0 +1,332 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Microsoft YaHei Regular,serif;
+    font-size: 62.5%;
+    background-color: #fafafa;
+}
+
+header {
+    width: 100%;
+    height: 3.9rem;
+    padding: 0 18.75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 576px) {
+    header {
+        display: none;
+    }
+}
+nav {
+    background-color: #29b078;
+    padding: 0 18.75%;
+}
+
+.pic-top-jns {
+    width: 10.7rem;
+    height: 4.9rem;
+    background: url("../pic/img.png")no-repeat -38.3rem 0;
+    background-size: 207.7rem 17.6rem;
+    margin: 2rem 0;
+}
+
+.service {
+    color: #29B078;
+    line-height: 3.9rem;
+    font-size: 1.4rem;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+   /*客服热线*/
+
+.icon-top {
+    width: 11.1rem;
+    height: 2.8rem;
+    display: flex;
+    justify-content: space-between;
+}
+   /*顶部图标框*/
+
+.icon-wx,.icon-qq,.icon-wb{
+    width: 2.5rem;
+    height: 2.4rem;
+    background: url("../pic/img.png")no-repeat;
+    background-size: 207.7rem 17.6rem;
+    margin: 0.2rem;
+}
+.icon-wx {
+    background-position: -7.9rem 0;
+}
+.icon-qq {
+    background-position: -2.9rem 0;
+}
+.icon-wb {
+    background-position: -5.4rem 0;
+}
+         /*图标*/
+
+.bg {
+    background-color: #29B078;
+}
+
+.nav-top {
+    padding: 0;
+}
+
+.word-title {
+    font-size: 3rem;
+    font-weight: bold;
+}
+/*左边标题文字技能树*/
+
+.distance-word {
+    margin-left: auto;
+    padding: 0;
+}
+.nav-4 {
+    width: 3.7rem;
+    height: 10rem;
+    padding: 0!important;
+    margin: 0 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.word-nav-1,.word-nav-2, .word-nav-3, .word-nav-4 {
+    font-size: 1.6rem;
+    text-align: center;
+    white-space: nowrap;
+    color: rgba(255,255,255,1) !important;
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 0 5%;
+    }
+    .nav-4 {
+        height: 4rem;
+        width: auto;
+    }
+    .pic-top-jns {
+        margin: 0;
+    }
+}
+/*宽度小于768px,按钮的媒体查询*/
+
+.distance-word .nav-4:hover {
+    border-bottom: 5px solid #fff;
+}
+/*导航菜单悬停下边框效果*/
+
+button:focus {
+    outline: none;
+}
+main .cooperation {
+    opacity: 1;
+    background: rgba(255,255,255,1);
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
+}
+
+.word-company {
+    font-size: 2.2rem;
+    margin: 0;
+    padding-top: 2.1rem;
+    padding-bottom: 2.4rem;
+    text-align: center;
+    border-bottom: 1px solid #E6E6E6;
+}
+/*以下是公司列表栏*/
+.content-box .list-word {
+    margin: 2.5rem 0 0 25%;
+}
+
+@media (max-width: 768px) {
+    .content-box .list-word {
+        margin: 2.5rem 0 0 40%;
+    }
+}
+
+.word-company-1 {
+    font-size: 1.4rem;
+    color: #29B078;
+    background-color: #fff;
+}
+
+.word-point {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background:rgba(255,255,255,1);
+    border:1px solid #ff650e;
+    display: inline-block;
+    margin-right: 0.7rem;
+}
+.list-company-main .active .word-point {
+    background-color: #ff650e;
+    color: #ff650e;
+}
+.nav-pills .nav-link.active {
+    color: #ff650e;
+    background-color: #fff;
+}
+/*被激活的原点背景色改变*/
+.list-company-main {
+     display: flex;
+     flex-direction: column;
+    padding-bottom: 3.5rem;
+ }
+/*以上是公司列表栏*/
+.pic-main-top {
+    width: 100%;
+}
+.pic-logo-main {
+    display: flex;
+    padding: 0 6.4rem 1.6rem 8.4rem;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.pic-logo-3 {
+    width: 13.4rem;
+    height: 12.2rem;
+    background: url("../pic/img.png")no-repeat -104.6rem 0;
+    background-size: 207.7rem 17.6rem;
+    margin-top: 1.8rem;
+}
+.content-company {
+    opacity: 1;
+    background: rgba(255,255,255,1);
+    box-shadow: 0 1px 3px 0 rgba(8,1,3,0.15);
+}
+/*公司内容框背景*/
+
+.introduction-title, .introduction-content {
+    font-size: 1.4rem;
+    color: #999999;
+    flex: 1;
+    text-indent: 2.8rem;
+}
+.introduction-title {
+    margin: 2.5rem 0 0 2.5rem;
+    line-height: 2.8rem;
+}
+@media (max-width: 768px) {
+    .pic-logo-main {
+        display: block;
+    }
+    .introduction-title {
+        margin-left: 0;
+    }
+    .pic-logo-3 {
+        margin: 0 auto;
+    }
+}
+
+.introduction-text {
+    padding: 0 6.4rem 18.4rem 6.4rem;
+}
+.introduction-content {
+    margin-top: 3.8rem;
+    line-height: 2.8rem;
+}
+/*公司简介文字*/
+.navigation-1 {
+    background-color: #fafafa;
+    margin: 0;
+    padding: 0;
+}
+.word-navigation-1,.word-navigation-2 {
+    font-size: 1.6rem;
+    margin-top: 3.3rem;
+    margin-bottom: 2.9rem;
+    padding: 0;
+    font-weight: 400;
+}
+.word-navigation-1 {
+    color: #333333;
+    font-family: Microsoft YaHei Regular, serif;
+}
+.breadcrumb .active {
+    color: #29B078;
+}
+/*面包屑导航栏，首页。职业*/
+
+.white-content {
+    height: 23.1rem;
+}
+
+footer {
+    background-color: #26A26F;
+}
+
+.footer-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+.skill-tree, .skill-tree-2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+.skill-tree {
+    margin-top: 3.3rem;
+    margin-bottom: 6rem;
+}
+.skill-tree-2 {
+    margin-top: 3.3rem;
+}
+
+.about-tree, .about-tree-2, .about-tree-3 {
+    font-size: 1.6rem;
+}
+.word-about, .word-about-2, .word-about-3 {
+    color: #FFFFFF !important;
+}
+
+.word-about-2 {
+    margin-left: 3.4rem;
+}
+.word-about-3 {
+    border-right: 2px solid #FFFFFF;
+    padding-right: 1rem;
+}
+
+.code-pic {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}
+      /*二维码*/
+
+.public-address {
+    font-size: 1.6rem;
+    color: #FFFFFF;
+    margin-top: 3.4rem;
+    font-weight: bold;
+}
+.pic-qr-code {
+    width: 9.2rem;
+    height: 9.2rem;
+    background: url("../pic/img.png")no-repeat -29.1rem 0;
+    background-size: 207.7rem 17.6rem;
+}
+   /*二维码图片*/
+
+.link-about {
+    font-size: 1.4rem;
+    color: #FFFFFF;
+    border-top: 1px solid #32C086;
+    padding: 0.7rem 0;
+    text-align: center;
+}

@@ -1,0 +1,392 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Microsoft YaHei Regular,serif;
+    font-size: 62.5%;
+    background-color: #fafafa;
+}
+
+header {
+    width: 100%;
+    height: 3.9rem;
+    padding: 0 18.75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+button:focus {
+    outline: none;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 576px) {
+    header {
+        display: none;
+    }
+}
+nav {
+    background-color: #29b078;
+    padding: 0 18.75%;
+}
+
+.pic-top-jns {
+    width: 10.7rem;
+    height: 4.9rem;
+    background: url("../pic/img.png")no-repeat -38.3rem 0;
+    background-size: 207.7rem 17.6rem;
+    margin: 2rem 0;
+}
+
+.service {
+    color: #29B078;
+    line-height: 3.9rem;
+    font-size: 1.4rem;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}                                      /*客服热线*/
+.icon-top {
+    width: 11.1rem;
+    height: 2.8rem;
+    display: flex;
+    justify-content: space-between;
+}                                     /*顶部图标框*/
+.icon-wx,.icon-qq,.icon-wb{
+    width: 2.5rem;
+    height: 2.4rem;
+    background: url("../pic/img.png")no-repeat;
+    background-size: 207.7rem 17.6rem;
+    margin: 0.2rem;
+}
+.icon-wx {
+    background-position: -7.9rem 0;
+}
+.icon-qq {
+    background-position: -2.9rem 0;
+}
+.icon-wb {
+    background-position: -5.4rem 0;
+}                                      /*图标*/
+
+.bg {
+    background-color: #29B078;
+}
+
+.nav-top {
+    padding: 0;
+}
+
+.word-title {
+    font-size: 3rem;
+    font-weight: bold;
+}                                              /*左边标题文字技能树*/
+
+.distance-word {
+    margin-left: auto;
+    padding: 0;
+}
+.nav-4 {
+    width: 3.7rem;
+    height: 10rem;
+    padding: 0!important;
+    margin: 0 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.word-nav-1,.word-nav-2, .word-nav-3, .word-nav-4 {
+    font-size: 1.6rem;
+    text-align: center;
+    white-space: nowrap;
+    color: rgba(255,255,255,1) !important;
+}
+@media (max-width: 768px) {
+    nav {
+        padding: 0 5%;
+    }
+    .nav-4 {
+        height: 4rem;
+        width: auto;
+    }
+    .pic-top-jns {
+        margin: 0;
+    }
+}
+/*宽度小于768px,按钮的媒体查询*/
+
+.distance-word .nav-4:hover {
+    border-bottom: 5px solid #fff;
+}
+   /*导航菜单悬停下边框效果*/
+
+main .navigation-1 {
+    background-color: #fafafa;
+    margin: 0;
+    padding: 0;
+}
+.word-navigation-1,.word-navigation-2 {
+    font-size: 1.6rem;
+    margin-top: 3.1rem;
+    margin-bottom: 3.2rem;
+    padding: 0;
+    font-weight: 400;
+}
+.word-navigation-1 {
+    color: #333333;
+    font-family: Microsoft YaHei Regular, serif;
+}
+.breadcrumb .active {
+    color: #29B078;
+}
+   /*面包屑导航栏，首页。职业*/
+
+.direction-middle {
+    border-top: 1px solid #D0D6D9;
+    border-bottom: 1px solid #D0D6D9;
+    padding: 2.3rem 0;
+}
+.word-direction-1 {
+    font-size: 1.4rem;
+    color: #999999;
+}
+.word-direction {
+    font-size: 1.4rem;
+    color: #333333;
+    margin-left: .9rem;
+}
+
+.direction-top a:hover {
+    color: #fff;
+    background-color: #29B078;
+}
+
+/*职业方向悬停绿色*/
+     /*以下是卡片介绍栏*/
+.direction-1 {
+    font-size: 1.6rem;
+    color: #333333;
+    font-weight: bold;
+    margin-top: 3.2rem;
+    padding-bottom: 3.1rem;
+    margin-bottom: 0;
+    border-bottom: 1px solid #D0D6D9;;
+}
+.row-1-card-1 {
+   padding: 0 0.68%;
+   cursor: pointer;
+   margin-top: 4.8rem;
+}
+.card-hidden {
+    position: relative;
+
+}
+.card-hidden-word {
+    height: 30%;
+    width: 30%;
+    position: absolute;
+    text-align: center;
+    padding: 20% 12%;
+    background-color: #080103;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    -webkit-transition: 0.2s all ease;
+    transition: 0.2s all ease;
+    z-index: -1;
+    overflow: hidden;
+}
+.card-word-title {
+    font-size: 1.6rem;
+    color: #FFFFFF;
+    margin-bottom: 3.7rem;
+    white-space: nowrap;
+}
+.card-word-p {
+    font-size: 1.6rem;
+    color: #FFFFFF;
+    margin-bottom: 8.8rem;
+}
+.card-hidden:hover .card-hidden-word {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    border-radius: 0.4rem;
+}
+/*隐藏部分卡片*/
+
+.card-box {
+    border-radius: 0.4rem;
+    box-shadow: 0 1px 3px 0 rgba(8,1,3,0.15);
+    background-color: #fff;
+}
+.card-title {
+    display: flex;
+    padding: 2rem 0.9rem 1.6rem 1.1rem;
+    margin: 0;
+}
+.container-fluid .card-portrait {
+    width: 13.9rem;
+    height: 13.9rem;
+    background: url("../pic/img.png")no-repeat -131.4rem 0;
+    background-size: 207.7rem 17.6rem;
+    margin-right: 0.8rem;
+}
+.word-card {
+    flex: 1;
+}
+.word-card-title {
+    font-size: 1.6rem;
+    color: #333333;
+    font-weight: bold;
+    margin-top: 1.4rem;
+    margin-bottom: 1.6rem;
+}
+.word-card-top {
+    font-size: 1.4rem;
+    color: #333333;
+    margin-top: 1.6rem;
+    word-break: break-all;
+    line-height: 2rem;
+}
+/*以上是职业说明及头像*/
+.main-threshold {
+    padding: 0;
+}
+.table-name {
+    table-layout: fixed;
+    word-wrap:break-word;
+}
+.hand-threshold-1,.grow-company {
+    border-right: 1px solid #EDF1F2;
+}
+.word-threshold {
+    font-size: 1.2rem;
+    color: #999999;
+    margin-right: 1.2rem;
+}
+.pic-star {
+    width: 1.6rem;
+    height: 1.5rem;
+    background: url("../pic/img.png")no-repeat -1.3rem 0;
+    background-size: 207.7rem 17.6rem;
+    display: inline-block;
+}
+.pic-time {
+    font-size: 1.2rem;
+    color: #333333;
+}
+.pic-time-num {
+    color: #F01400;
+}
+.table-sm td, .table-sm th  {
+    padding: 1.2rem 1.1rem;
+    vertical-align: middle;
+}
+
+.text-money {
+    text-align: center;
+    line-height: 14.1rem;
+    margin: 0 auto;
+    border-right: 1px solid #EDF1F2;
+}
+.word-money, .word-money-2 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    color: #999999;
+}
+.word-money-1 {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #999999;
+}
+.word-year {
+    font-size: 1.2rem;
+    color: #333333;
+    margin-left: 1.1rem;
+    margin-right: 1.1rem;
+}
+.word-money-bottom {
+    font-size: 1.5rem;
+    color: #333333;
+    font-weight: bold;
+}
+.text-money-num {
+    color: #F01400;
+}
+.word-threshold-2 {
+    font-size: 1.2rem;
+    color: #999999;
+}
+/*上面是卡片栏*/
+.none-bottom {
+    height: 23.5rem;
+}
+
+footer {
+    background-color: #26A26F;
+}
+
+.footer-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+.skill-tree, .skill-tree-2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+.skill-tree {
+    margin-top: 3.3rem;
+    margin-bottom: 6rem;
+}
+.skill-tree-2 {
+    margin-top: 3.3rem;
+}
+
+.about-tree, .about-tree-2, .about-tree-3 {
+    font-size: 1.6rem;
+}
+.word-about, .word-about-2, .word-about-3 {
+    color: #FFFFFF !important;
+}
+
+.word-about-2 {
+    margin-left: 3.4rem;
+}
+.word-about-3 {
+    border-right: 2px solid #FFFFFF;
+    padding-right: 1rem;
+}
+
+.code-pic {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}                                  /*二维码*/
+
+.public-address {
+    font-size: 1.6rem;
+    color: #FFFFFF;
+    margin-top: 3.4rem;
+    font-weight: bold;
+}
+.pic-qr-code {
+    width: 9.2rem;
+    height: 9.2rem;
+    background: url("../pic/img.png")no-repeat -29.1rem 0;
+    background-size: 207.7rem 17.6rem;
+}                                  /*二维码图片*/
+.link-about {
+    font-size: 1.4rem;
+    color: #FFFFFF;
+    border-top: 1px solid #32C086;
+    padding: 0.7rem 0;
+    text-align: center;
+}
