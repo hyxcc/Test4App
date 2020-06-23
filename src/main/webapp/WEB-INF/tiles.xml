@@ -3,14 +3,21 @@
         "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
         "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
-    <!-- 主布局 -->
-    <definition name="layout" template="/mainLayout.jsp">
+    <!-- 主布局,基础模板 -->
+    <definition name="template_base" template="/jsp/template.jsp">
     </definition>
-    <!-- 主布局 -->
-    <!-- 项目 -->
-    <definition name="myView" extends="layout">
-        <put-attribute name="A" value="/A.jsp" />
-        <put-attribute name="item" expression="/${item}.jsp" />
+    <!-- 单个次布局   extends继承上面的主模块，也可以直接引用-->
+    <!--可以用通配符匹配多个页面，我这就没配我的menu.jsp页面，用的是通配符匹配，也能匹配到-->
+    <definition name="*" extends="template_base">
+        <put-attribute name="header" value="/jsp/header.jsp"/>
+        <!--这里{1}是通配符的意思，{1}代表definition name="*"中的*-->
+        <put-attribute name="body" value="/jsp/{1}.jsp" />
+        <put-attribute name="footer" value="/jsp/footer.jsp"/>
     </definition>
-    <!--项目-->
+    <!--也可以单个jsp页面匹配-->
+    <definition name="content" extends="template_base">
+        <put-attribute name="header" value="/jsp/header.jsp"/>
+        <put-attribute name="body" value="/jsp/content.jsp"/>
+        <put-attribute name="footer" value="/jsp/footer.jsp"/>
+    </definition>
 </tiles-definitions>

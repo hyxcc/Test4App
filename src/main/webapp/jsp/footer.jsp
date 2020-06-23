@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge chrome=1">
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <link href="../css/mission8-3.css" rel="stylesheet" type="text/css">
+    <link href="../css/mission8-1.css" rel="stylesheet" type="text/css">
     <title>Title</title>
 </head>
 <body>
@@ -41,5 +41,8 @@
     </div>
     <p class="link-about">Copyright©2015技能树 www.jnshu.com  All Rights Reserved | 京ICP备130058880号</p>
 </footer>
+<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
