@@ -7,10 +7,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 @Controller
-@RequestMapping("/tiles")
+@RequestMapping("/jnshuTest4")
 public class TilesController {
 
-    @RequestMapping(value = "/main")
+    @RequestMapping(value = "/student")
     public String tilesTest1(){
         return "menu";
     }
