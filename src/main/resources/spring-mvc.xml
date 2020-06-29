@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <import resource="applicationContext.xml"/>
+    <context:component-scan base-package="com.hyx.controller"/>
+    <!--mvc注解相关的扫描-->
+    <mvc:annotation-driven/>
+    <!--springmvc对静态资源的过滤,交给servlet处理-->
+    <mvc:default-servlet-handler/>
+    <!-- 引入Tiles配置文件 -->
+    <bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer" >
+        <property name="definitions">
+            <list>
+                <value>/WEB-INF/tiles.xml</value>
+            </list>
+        </property>
+    </bean>
+    <!-- 配置 Tiles 视图解析器 -->
+    <bean id="tilesViewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+        <property name="viewClass">
+            <value>org.springframework.web.servlet.view.tiles3.TilesView</value>
+        </property>
+    </bean>
+</beans>

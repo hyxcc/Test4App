@@ -15,8 +15,9 @@
 <body>
 <table>
     <tr>
-        <tiles:insertAttribute name="header"/>
+        <tiles:insertAttribute name="header" />
     </tr>
+
     <tr>
         <tiles:insertAttribute name="body"/>
     </tr>

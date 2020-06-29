@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>官网首页</title>
@@ -172,11 +173,13 @@
                     <div class="container">
                         <div class="row box-people">
                             <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                                <c:forEach items="${student}" var="stu" begin="0" end="3">
                                 <div class="portrait">
                                     <div class="portrait-people-1"></div>
-                                    <h4 class="card-title">技术顾问:魏夕皓</h4>
-                                    <p class="card-word">百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设。</p>
+                                    <h4 class="card-title">${stu.position}:${stu.name}</h4>
+                                    <p class="card-word">${stu.intro}</p>
                                 </div>
+                                </c:forEach>
                             </div>
                         </div>
                     </div>

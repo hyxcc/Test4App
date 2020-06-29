@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hyx.dao.ProfessionMapper">
+  <resultMap id="BaseResultMap" type="com.hyx.pojo.Profession">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="img" jdbcType="VARCHAR" property="img" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="dvp_direction" jdbcType="VARCHAR" property="dvpDirection" />
+    <result column="limit_condition" jdbcType="INTEGER" property="limitCondition" />
+    <result column="difficulty" jdbcType="INTEGER" property="difficulty" />
+    <result column="periodOne" jdbcType="INTEGER" property="periodone" />
+    <result column="periodTwo" jdbcType="INTEGER" property="periodtwo" />
+    <result column="carrer_prospects" jdbcType="INTEGER" property="carrerProspects" />
+    <result column="salaryOne" jdbcType="INTEGER" property="salaryone" />
+    <result column="salaryTwo" jdbcType="INTEGER" property="salarytwo" />
+    <result column="stu_count" jdbcType="INTEGER" property="stuCount" />
+    <result column="create_at" jdbcType="BIGINT" property="createAt" />
+    <result column="update_at" jdbcType="BIGINT" property="updateAt" />
+    <result column="intro" jdbcType="VARCHAR" property="intro" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, img, name, dvp_direction,intro, limit_condition, difficulty, periodOne, periodTwo,
+    carrer_prospects, salaryOne, salaryTwo, stu_count, create_at, update_at
+  </sql>
+  <select id="selectAll"  resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from profession
+    where dvp_direction=#{dvpDirection}
+    order by dvp_direction
+  </select>
+</mapper>
