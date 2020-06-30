@@ -29,6 +29,19 @@
     <servlet-name>springMVC</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
+  <!--定义post请求为UTF-8字符集-->
+  <filter>
+    <filter-name>characterFilter</filter-name>
+    <filter-class>com.hyx.util.EncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>characterFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
   <!--HiddenHttpMethodFilter，能把POST请求转换为PUT或DELETE请求-->
   <filter>
     <filter-name>HiddenHttpMethodFilter</filter-name>

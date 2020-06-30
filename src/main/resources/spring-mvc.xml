@@ -15,6 +15,7 @@
     <mvc:annotation-driven/>
     <!--springmvc对静态资源的过滤,交给servlet处理-->
     <mvc:default-servlet-handler/>
+
     <!-- 引入Tiles配置文件 -->
     <bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer" >
         <property name="definitions">
