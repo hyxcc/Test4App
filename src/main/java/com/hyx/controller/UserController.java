@@ -49,7 +49,7 @@ public class UserController {
             System.out.println("Md5加密后的密码："+md5String);
             User user1 = userService.findOne(user);
             //token生成并进行DES加密
-            String token = DESUtil.desEncrypt(user1.getNumber()+","+ new Date().getTime(),"12345678");
+            String token = DESUtil.desEncrypt(user1.getId()+","+ new Date().getTime(),"12345678");
             //放入cookie中返回
             CookieUtil.setCookie(response,"token",token,60*60*24);
             //判断加盐后密码是否一致

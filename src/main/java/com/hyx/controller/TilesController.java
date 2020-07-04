@@ -38,7 +38,7 @@ public class TilesController {
      * @param map
      * @return
      */
-    @RequestMapping(value = "/content")
+    @RequestMapping(value = "/u/content")
     public String tilesTest2(Map<String,Object> map){
         //我先查出所有的职业方向分类。
         List<ProCatalog> listCatalog = procatalog.selectAll();

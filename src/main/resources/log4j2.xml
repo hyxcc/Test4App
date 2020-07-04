@@ -68,6 +68,5 @@
         <logger name="org.apache.shiro.cache.ehcache.EhCache" level="WARN" />
         <!-- 对包进行更详细的配置 -->
         <!-- additivity表示是否追加,防止重复,因为root已经接收过一次了 -->
-
     </Loggers>
 </Configuration>

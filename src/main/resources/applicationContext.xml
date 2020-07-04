@@ -2,13 +2,13 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:mvc="http://www.springframework.org/schema/mvc"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/aop
        http://www.springframework.org/schema/aop/spring-aop.xsd
        http://www.springframework.org/schema/context
-       https://www.springframework.org/schema/context/spring-context.xsd">
+       https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
     <context:annotation-config/>
     <!--扫描spring注解-->
@@ -36,4 +36,16 @@
     <!--开启aspectj的自动代理-->
     <aop:aspectj-autoproxy/>
 
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!--/**是对所有请求路径以及子路经进行拦截-->
+            <mvc:mapping path="/**"/>
+            <!--这儿需要注意，拦截器拦截全部请求的话会把包括静态资源请求也拦截到，
+            如果对某些静态资源不拦截可以配置exclude-mapping-->
+            <mvc:exclude-mapping path="/css/**"/>
+            <mvc:exclude-mapping path="/img/**"/>
+            <mvc:exclude-mapping path="/pic/**"/>
+            <bean class="com.hyx.interceptor.MyInterceptor"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>

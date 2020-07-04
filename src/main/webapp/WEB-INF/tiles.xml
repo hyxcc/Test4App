@@ -14,6 +14,11 @@
         <put-attribute name="body" value="/jsp/{1}.jsp" />
         <put-attribute name="footer" value="/jsp/footer.jsp"/>
     </definition>
+    <definition name="menu" extends="template_base">
+        <put-attribute name="header" value="/jsp/header.jsp"/>
+        <put-attribute name="body" value="/jsp/menu.jsp" />
+        <put-attribute name="footer" value="/jsp/footer.jsp"/>
+    </definition>
     <!--也可以单个jsp页面匹配-->
     <definition name="content" extends="template_base">
         <put-attribute name="header" value="/jsp/header.jsp"/>
