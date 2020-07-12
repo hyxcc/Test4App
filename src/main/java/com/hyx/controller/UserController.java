@@ -75,13 +75,14 @@ public class UserController {
      * @return 跳转到登录页面
      */
     @RequestMapping("/regist")
-    public String doregist(User user){
+    @ResponseBody
+    public Result doregist(User user){
         String pwd = user.getPwd();
         System.out.println("注册时的密码："+ pwd);
         String md5String = Md5.getMd5(pwd);
         System.out.println("Md5加密后的密码："+md5String);
         user.setPwd(md5String);
         int num = userService.insert(user);
-        return "login";
+        return Result.back(num);
     }
 }

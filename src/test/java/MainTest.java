@@ -1,12 +1,16 @@
+import com.danga.MemCached.MemCachedClient;
 import com.hyx.pojo.Profession;
 import com.hyx.pojo.Student;
 import com.hyx.pojo.User;
 import com.hyx.service.ProfessionService;
 import com.hyx.service.StudentService;
 import com.hyx.service.UserService;
+import com.hyx.util.MemcachedUtil;
 import com.hyx.util.DESUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -23,6 +27,7 @@ public class MainTest {
     private ProfessionService proService;
     @Resource
     private UserService userService;
+    private Logger log = LoggerFactory.getLogger(MainTest.class);
 
     @Test
     public void student(){
@@ -61,5 +66,16 @@ public class MainTest {
         System.out.println("加密后数据："+encryptResult);
         String decryptResult= DESUtil.desDecrypt(encryptResult,key);
         System.out.println("解密后数据："+decryptResult);
+    }
+
+    @Test
+    public void jedisTest(){
+        log.info("====start===");
+        long startTime = System.currentTimeMillis();
+        List list = studentService.selectAll();
+        System.out.println(list);
+        long endTime = System.currentTimeMillis();
+        log.info("执行时间：[{}ms]",endTime-startTime);
+        log.info("====end====");
     }
 }
