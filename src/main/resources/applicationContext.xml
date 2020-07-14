@@ -119,18 +119,17 @@
     </bean>
     <context:property-placeholder location="classpath:redis.properties" ignore-unresolvable="true"/>
     <!-- 创建Redis工具类，封装好Redis的连接以进行相关的操作 -->
-    <bean id="jedisUtil" class="com.hyx.util.JedisUtil" scope="singleton">
+    <bean id="jedisUtil" class="com.hyx.util.JedisUtil" >
         <property name="jedisPool">
             <ref bean="jedisWritePool" />
         </property>
     </bean>
     <!-- Redis的key操作 -->
-    <bean id="jedisKeys" class="com.hyx.util.JedisUtil$Keys" scope="singleton">
+    <bean id="jedisKeys" class="com.hyx.util.JedisUtil$Keys" >
         <constructor-arg ref="jedisUtil"></constructor-arg>
     </bean>
     <!-- Redis的Strings操作 -->
-    <bean id="jedisStrings" class="com.hyx.util.JedisUtil$Strings"
-          scope="singleton">
+    <bean id="jedisStrings" class="com.hyx.util.JedisUtil$Strings">
         <constructor-arg ref="jedisUtil"></constructor-arg>
     </bean>
 
